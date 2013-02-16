@@ -21,7 +21,7 @@ openpli arm build howto(with Ubuntu 12.04 64bit)
   ~$ cd openpli
 
 6.Download openpli arm Makefile
-  ~$ 
+  ~$ wget https://raw.github.com/openpli-arm/openpli/master/Makefile
 
 7.Now just type:
   ~$ make image
