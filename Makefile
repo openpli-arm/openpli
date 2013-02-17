@@ -5,7 +5,7 @@ BUILDDIR = build-${MACHINE}
 # for a list of some other repositories have
 # a look at http://git.opendreambox.org/
 GIT_URL = https://github.com/openpli-arm/openembedded.git
-GIT_BRANCH = openpli-2.0-su980
+GIT_BRANCH = master
 BITBAKE_BRANCH = senbox
 TOOLCHAIN_NAME = gcc-4.5.2_glibc
 TOOLCHAIN_FULL_NAME = gcc-4.5.2_glibc.tar.bz2
@@ -66,7 +66,7 @@ $(OE_BASE)/${BUILDDIR}/conf/local.conf:
 	echo 'DISTRO = "openpli"' >> $@
 	echo 'CACHE = "$${OE_BASE}/cache/oe-cache.$${USER}.$${MACHINE}"' >> $@
 	echo 'BB_NUMBER_THREADS = "2"' >> $@
-	echo 'PARALLEL_MAKE = "-j1"' >> $@
+	echo 'PARALLEL_MAKE = "-j4"' >> $@
 	echo '#BB_SRCREV_POLICY = "cache"' >> $@
 	echo 'TOPDIR = "$${OE_BASE}/build-$${MACHINE}"' >> $@
 	echo 'IMAGE_KEEPROOTFS = "0"' >> $@
